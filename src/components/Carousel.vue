@@ -56,6 +56,7 @@ onBeforeUnmount(() => {
       type="text"
       class="w-96 p-3 border-none rounded-lg focus:outline-none italic"
       placeholder="Put a Image URl link"
+      required
     />
 
     <button
