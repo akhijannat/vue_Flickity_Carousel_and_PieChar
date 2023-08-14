@@ -43,6 +43,15 @@ onBeforeUnmount(() => {
     chartInstance.destroy();
   }
 });
+
+const isValidUrl = (url) => {
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
+  }
+};
 </script>
 <template>
   <h1
@@ -68,6 +77,7 @@ onBeforeUnmount(() => {
       type="button"
       @click="addDataPoint"
       class="inline-flex items-center px-5 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100"
+      :disabled="!isValidUrl(newItem)"
     >
       <span class="text-xl font-bold mr-2"> + </span>
       Add to chart
