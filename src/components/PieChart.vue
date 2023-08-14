@@ -60,8 +60,8 @@ onBeforeUnmount(() => {
       v-model="newDataValue"
       type="number"
       class="p-3 border-none rounded-lg focus:outline-none italic"
-      required
       placeholder="Put a Number"
+      required
     />
 
     <button
